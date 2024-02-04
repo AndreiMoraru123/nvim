@@ -11,7 +11,7 @@ return {
     config = function()
         vim.cmd("colorscheme rose-pine")
         require('rose-pine').setup({
-            disable_background = true
+            -- disable_background = true
         })
         ColorMyPencils()
     end

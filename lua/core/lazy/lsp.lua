@@ -31,6 +31,10 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "pyright",
+                "clangd",
+                "rust_analyzer",
+                "tsserver",
+                "gopls"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
