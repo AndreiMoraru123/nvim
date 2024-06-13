@@ -1,0 +1,61 @@
+[
+  {
+    "key": "ctrl+u",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        {
+          "command": "editorScroll",
+          "args": {
+            "to": "up",
+            "by": "halfPage"
+          }
+        },
+        {
+          "command": "cursorMove",
+          "args": { "to": "viewPortCenter" }
+        }
+      ]
+    }
+  },
+  {
+    "key": "ctrl+d",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        {
+          "command": "editorScroll",
+          "args": {
+            "to": "down",
+            "by": "halfPage"
+          }
+        },
+        {
+          "command": "cursorMove",
+          "args": { "to": "viewPortCenter" }
+        }
+      ]
+    }
+  },
+  {
+    "key": "ctrl+y",
+    "command": "acceptSelectedSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible && !editorReadonly && neovim.mode == insert"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "editor.action.marker.next",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "editor.action.marker.prev",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+h",
+    "command": "editor.showCallHierarchy",
+    "when": "editorTextFocus"
+  }
+]
+
