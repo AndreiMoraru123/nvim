@@ -29,6 +29,7 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
+                "nil_ls",
                 "lua_ls",
                 "pyright",
                 "clangd",
