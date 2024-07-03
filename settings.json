@@ -1,67 +1,63 @@
 {
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "terminal.integrated.env.osx": {
-      "PATH": "...:/usr/bin:/bin:..."
-    },
-  
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[python]": {
-      "editor.defaultFormatter": "ms-python.black-formatter"
-    },
-    "python.testing.pytestArgs": ["."],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
-    "editor.lineNumbers": "relative",
-    "extensions.experimental.affinity": {
-      "asvetliakov.vscode-neovim": 1
-    },
-    "editor.semanticHighlighting.enabled": true,
-    "editor.fontFamily": "'Fira Code Medium'",
-    "editor.fontLigatures": false,
-    "editor.fontSize": 15,
-    "zenMode.centerLayout": false,
-    "debug.console.fontSize": 16,
-    "terminal.integrated.fontFamily": "'Fira Code Medium'",
-    "git.autofetch": true,
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.inlayHints.callArgumentNames": "all",
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.pytestParameters": true,
-    "python.analysis.inlayHints.variableTypes": true,
-    "githubPullRequests.pullBranch": "never",
-    "editor.rulers": [120],
-    "workbench.colorCustomizations": {
-      "editorRuler.foreground": "#5A5A5A"
-    },
-    "git.confirmSync": false,
-    "zenMode.hideLineNumbers": false,
-    "zenMode.showTabs": "none",
-    "workbench.colorTheme": "Azure Contrast (rainglow)",
-    "python.analysis.autoFormatStrings": true,
-    "python.analysis.addImport.heuristics": true,
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "jupyter.askForKernelRestart": false,
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "notebook.formatOnSave.enabled": true,
-    "explorer.confirmPasteNative": false,
-    "vscode-neovim.compositeKeys": {
-      "jk": {
-        "command": "vscode-neovim.lua",
-        "args": [
-          [
-            "local code = require('vscode-neovim')",
-            "code.action('vscode-neovim.escape')",
-            "code.action('workbench.action.files.save')"
-          ]
-        ]
-      }
-    }
-  }
-  
-  
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "window.zoomLevel": 0.5,
+  "terminal.integrated.env.osx": {
+    "PATH": "...:/usr/bin:/bin:..."
+  },
 
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "editor.lineNumbers": "relative",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.semanticHighlighting.enabled": true,
+  "editor.fontFamily": "Iosevka Nerd Font Medium",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 16,
+  "zenMode.centerLayout": false,
+  "debug.console.fontSize": 16,
+  "terminal.integrated.fontFamily": "'Fira Code Medium'",
+  "git.autofetch": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "githubPullRequests.pullBranch": "never",
+  "editor.rulers": [120],
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#5A5A5A"
+  },
+  "git.confirmSync": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.showTabs": "none",
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.addImport.heuristics": true,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "jupyter.askForKernelRestart": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.formatOnSave.enabled": true,
+  "explorer.confirmPasteNative": false,
+  "github.copilot.editor.enableAutoCompletions": false,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "cmake.configureSettings": {
+    "CMAKE_C_COMPILER": "/run/current-system/sw/bin/gcc",
+    "CMAKE_CXX_COMPILER": "/run/current-system/sw/bin/g++"
+  },
+  "workbench.colorTheme": "Theme + Dark Blue Theme"
+}
