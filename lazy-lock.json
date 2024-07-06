@@ -1,13 +1,4 @@
 {
-<<<<<<< HEAD
-  "fast-cursor-move.nvim": { "branch": "main", "commit": "9ab80d0184861be18833647e983086725b9905f9" },
-  "flash.nvim": { "branch": "main", "commit": "48817af25f51c0590653bbc290866e4890fe1cbe" },
-  "lazy.nvim": { "branch": "main", "commit": "fafe1f7c640aed75e70a10e6649612cd96f39149" },
-  "quick-scope": { "branch": "master", "commit": "256d81e391a22eeb53791ff62ce65f870418fa71" },
-  "vim-indent-object": { "branch": "master", "commit": "8ab36d5ec2a3a60468437a95e142ce994df598c6" },
-  "vim-sneak": { "branch": "master", "commit": "c13d0497139b8796ff9c44ddb9bc0dc9770ad2dd" },
-  "vscode-multi-cursor.nvim": { "branch": "main", "commit": "a0af78cf5e5a6f2d55e37e7907a3d1b096bbaa4d" }
-=======
   "LuaSnip": { "branch": "master", "commit": "03c8e67eb7293c404845b3982db895d59c0d1538" },
   "cloak.nvim": { "branch": "main", "commit": "648aca6d33ec011dc3166e7af3b38820d01a71e4" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
@@ -46,5 +37,4 @@
   "vim-indent-object": { "branch": "master", "commit": "8ab36d5ec2a3a60468437a95e142ce994df598c6" },
   "vim-sneak": { "branch": "master", "commit": "c13d0497139b8796ff9c44ddb9bc0dc9770ad2dd" },
   "zen-mode.nvim": { "branch": "main", "commit": "e7e5563d736900679d147e1e6bbdc64d6ecbba3f" }
->>>>>>> 003398e (no gui cursor)
 }
