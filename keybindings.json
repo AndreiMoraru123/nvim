@@ -53,8 +53,8 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+h",
+    "key": "ctrl+h",
     "command": "editor.showCallHierarchy",
-    "when": "editorTextFocus && neovim.mode != insert"
+    "when": "editorTextFocus"
   }
 ]
