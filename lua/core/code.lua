@@ -25,7 +25,8 @@ vim.keymap.set('n', '<leader>o', function() vscode.action('workbench.action.debu
     { noremap = true, silent = true })
 
 -- Jump to cursor
-vim.keymap.set('n', '<leader>j', function() vscode.action('debug.jumpToCursor') end, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>j', function() vscode.action('debug.jumpToCursor') end,
+    { noremap = true, silent = true })
 
 -- Restart debugging
 vim.keymap.set('n', '<leader>r', function() vscode.action('workbench.action.debug.restart') end,
@@ -44,25 +45,16 @@ vim.keymap.set('n', '<leader>f', function() vscode.action('editor.action.formatD
     { noremap = true, silent = true })
 
 -- Test at cursor
-vim.keymap.set('n', '<leader>t', function() vscode.action('testing.runAtCursor') end, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>t', function() vscode.action('testing.runAtCursor') end,
+    { noremap = true, silent = true })
 
 -- Debug test at cursor
-vim.keymap.set('n', '<leader>dt', function() vscode.action('testing.debugAtCursor') end,
+vim.keymap.set('n', '<leader>d', function() vscode.action('testing.debugAtCursor') end,
     { noremap = true, silent = true })
 
 -- Test current file
-vim.keymap.set('n', '<leader>tf', function() vscode.action('testing.runCurrentFile') end,
+vim.keymap.set('n', '<C-t>', function() vscode.action('testing.runCurrentFile') end,
     { noremap = true, silent = true })
-
--- Debug tests in current file
-vim.keymap.set('n', '<leader>dtf', function() vscode.action('testing.debugCurrentFile') end,
-    { noremap = true, silent = true })
-
--- Test all
-vim.keymap.set('n', '<leader>tt', function() vscode.action('testing.runAll') end, { noremap = true, silent = true })
-
--- Debug all tests
-vim.keymap.set('n', '<leader>dtt', function() vscode.action('testing.debugAll') end, { noremap = true, silent = true })
 
 -- Configure python tests
 vim.keymap.set('n', '<leader>pt', function() vscode.action('python.configureTests') end,
@@ -71,4 +63,3 @@ vim.keymap.set('n', '<leader>pt', function() vscode.action('python.configureTest
 -- Zen mode
 vim.keymap.set('n', '<leader>zz', function() vscode.action('workbench.action.toggleZenMode') end,
     { noremap = true, silent = true })
-
