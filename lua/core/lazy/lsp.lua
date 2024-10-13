@@ -59,6 +59,25 @@ return {
             },
         })
 
+        local lspconfig = require("lspconfig")
+        lspconfig.prolog_ls.setup {
+            cmd = { "swipl",
+                "-g", "use_module(library(lsp_server)).",
+                "-g", "lsp_server:main",
+                "-t", "halt",
+                "--", "stdio"
+            },
+            filetypes = { "prolog" },
+            root_dir = lspconfig.util.find_git_ancestor,
+            single_file_support = true,
+        }
+
+        vim.filetype.add({
+            extension = {
+                pl = "prolog",
+            },
+        })
+
         cmp.setup({
             snippet = {
                 -- REQUIRED - you must specify a snippet engine
