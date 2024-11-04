@@ -60,6 +60,15 @@ return {
         })
 
         local lspconfig = require("lspconfig")
+
+        local function disable_highlight(filetype)
+            if vim.bo.filetype == filetype then
+                for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+                    vim.api.nvim_set_hl(0, group, {})
+                end
+            end
+        end
+
         lspconfig.prolog_ls.setup {
             cmd = { "swipl",
                 "-g", "use_module(library(lsp_server)).",
@@ -70,6 +79,9 @@ return {
             filetypes = { "prolog" },
             root_dir = lspconfig.util.find_git_ancestor,
             single_file_support = true,
+            on_attach = function()
+                disable_highlight("prolog")
+            end,
         }
 
         vim.filetype.add({
