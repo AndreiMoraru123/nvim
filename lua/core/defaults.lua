@@ -46,7 +46,7 @@ if not vim.g.vscode then
             local opts = { buffer = e.buf }
             vim.keymap.set("n", "gO", vim.lsp.buf.workspace_symbol, opts)
             vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, opts)
-            vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
+            vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help, opts)
         end,
     })
 
