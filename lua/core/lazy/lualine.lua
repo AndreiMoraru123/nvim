@@ -3,10 +3,9 @@ return {
     cond = not vim.g.vscode,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-        require("darkvoid").setup()
         require('lualine').setup {
             options = {
-                theme = "auto",
+                theme = "rose-pine",
                 icons_enabled = true,
                 component_separators = { left = '', right = '' },
                 section_separators = { left = '', right = '' },
