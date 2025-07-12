@@ -5,7 +5,8 @@
   "terminal.integrated.env.osx": {
     "PATH": "...:/usr/bin:/bin:..."
   },
-
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.shellIntegration.enabled": true,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
