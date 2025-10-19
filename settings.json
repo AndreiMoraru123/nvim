@@ -60,5 +60,6 @@
     "CMAKE_C_COMPILER": "/run/current-system/sw/bin/gcc",
     "CMAKE_CXX_COMPILER": "/run/current-system/sw/bin/g++"
   },
-  "workbench.colorTheme": "Theme + Dark Blue Theme"
+  "workbench.colorTheme": "Theme + Dark Blue Theme",
+  "editor.inlayHints.enabled": "offUnlessPressed"
 }
