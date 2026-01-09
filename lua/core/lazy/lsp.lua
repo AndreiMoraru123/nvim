@@ -8,7 +8,6 @@ return {
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
         "hrsh7th/nvim-cmp",
-        "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
     },
@@ -34,55 +33,57 @@ return {
                 "pyright",
                 "clangd",
                 "rust_analyzer",
-                "tsserver",
                 "gopls"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
-                    require("lspconfig")[server_name].setup {
+                    vim.lsp.config(server_name,  {
                         capabilities = capabilities,
-                    }
+                    })
+                    vim.lsp.enable(server_name)
                 end,
                 ["lua_ls"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.lua_ls.setup {
-                        capabilities = capabilities,
-                        settings = {
-                            Lua = {
-                                diagnostics = {
-                                    globals = { "vim" }
+                    vim.lsp.config("lua_ls",
+                        {
+                            capabilities = capabilities,
+                            settings = {
+                                Lua = {
+                                    diagnostics = {
+                                        globals = { "vim" }
+                                    }
                                 }
                             }
                         }
-                    }
+                    )
+                    vim.lsp.enable({"lua_ls"})
                 end,
             },
         })
 
-        local lspconfig = require("lspconfig")
+        -- local lspconfig = require("lspconfig")
 
-        local function disable_highlight(filetype)
-            if vim.bo.filetype == filetype then
-                for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
-                    vim.api.nvim_set_hl(0, group, {})
-                end
-            end
-        end
+        -- local function disable_highlight(filetype)
+        --     if vim.bo.filetype == filetype then
+        --         for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+        --             vim.api.nvim_set_hl(0, group, {})
+        --         end
+        --     end
+        -- end
 
-        lspconfig.prolog_ls.setup {
-            cmd = { "swipl",
-                "-g", "use_module(library(lsp_server)).",
-                "-g", "lsp_server:main",
-                "-t", "halt",
-                "--", "stdio"
-            },
-            filetypes = { "prolog" },
-            root_dir = lspconfig.util.find_git_ancestor,
-            single_file_support = true,
-            on_attach = function()
-                disable_highlight("prolog")
-            end,
-        }
+        -- lspconfig.prolog_ls.setup {
+        --     cmd = { "swipl",
+        --         "-g", "use_module(library(lsp_server)).",
+        --         "-g", "lsp_server:main",
+        --         "-t", "halt",
+        --         "--", "stdio"
+        --     },
+        --     filetypes = { "prolog" },
+        --     root_dir = lspconfig.util.find_git_ancestor,
+        --     single_file_support = true,
+        --     on_attach = function()
+        --         disable_highlight("prolog")
+        --     end,
+        -- }
 
         vim.filetype.add({
             extension = {
