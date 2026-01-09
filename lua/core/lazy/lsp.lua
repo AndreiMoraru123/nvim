@@ -30,7 +30,7 @@ return {
             ensure_installed = {
                 "nil_ls",
                 "lua_ls",
-                "pyright",
+                "pyrefly",
                 "clangd",
                 "rust_analyzer",
                 "gopls"
