@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-    color = color or "rose-pine"
+    color = color or "vesper"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -7,11 +7,11 @@ function ColorMyPencils(color)
 end
 
 return {
-    "rose-pine/neovim",
+    "datsfilipe/vesper.nvim",
     cond = not vim.g.vscode,
     config = function()
-        vim.cmd("colorscheme rose-pine")
-        require('rose-pine').setup({
+        vim.cmd("colorscheme vesper")
+        require('vesper').setup({
             disable_background = true,
         })
         ColorMyPencils()
