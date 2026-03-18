@@ -2,7 +2,7 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
         "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
+        {"williamboman/mason-lspconfig.nvim", tag = "v1.29.0"},
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
@@ -28,22 +28,18 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "nil_ls",
                 "lua_ls",
-                "pyrefly",
-                "clangd",
-                "rust_analyzer",
-                "gopls"
+                "basedpyright",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
-                    vim.lsp.config(server_name,  {
+                    require("lspconfig")[server_name].setup({
+
                         capabilities = capabilities,
                     })
-                    vim.lsp.enable(server_name)
                 end,
                 ["lua_ls"] = function()
-                    vim.lsp.config("lua_ls",
+                    require("lspconfig").lua_ls.setup({
                         {
                             capabilities = capabilities,
                             settings = {
@@ -54,8 +50,7 @@ return {
                                 }
                             }
                         }
-                    )
-                    vim.lsp.enable({"lua_ls"})
+                    })
                 end,
             },
         })
