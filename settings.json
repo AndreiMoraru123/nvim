@@ -61,5 +61,8 @@
     "CMAKE_CXX_COMPILER": "/run/current-system/sw/bin/g++"
   },
   "workbench.colorTheme": "Theme + Dark Blue Theme",
-  "editor.inlayHints.enabled": "offUnlessPressed"
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+  "C_Cpp.inlayHints.parameterNames.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.enabled": true,
 }
