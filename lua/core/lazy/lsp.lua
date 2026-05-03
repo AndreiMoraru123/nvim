@@ -28,7 +28,6 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "nil_ls",
                 "lua_ls",
                 "pyrefly",
                 "clangd",
@@ -59,6 +58,13 @@ return {
                 end,
             },
         })
+
+        if vim.fn.executable("nil") == 1 then
+            vim.lsp.config("nil_ls", {
+                capabilities = capabilities,
+            })
+            vim.lsp.enable("nil_ls")
+        end
 
         -- local lspconfig = require("lspconfig")
 
