@@ -36,7 +36,13 @@ autocmd('TextYankPost', {
 autocmd({ "BufWritePre" }, {
     group = core_group,
     pattern = "*",
-    command = [[%s/\s\+$//e]],
+    callback = function(args)
+        if vim.bo[args.buf].modifiable then
+            vim.api.nvim_buf_call(args.buf, function()
+                vim.cmd([[%s/\s\+$//e]])
+            end)
+        end
+    end,
 })
 
 if not vim.g.vscode then
