@@ -60,9 +60,12 @@
     "CMAKE_C_COMPILER": "/run/current-system/sw/bin/gcc",
     "CMAKE_CXX_COMPILER": "/run/current-system/sw/bin/g++"
   },
-  "workbench.colorTheme": "Theme + Dark Blue Theme",
+  "workbench.colorTheme": "Nexus Dark (Beta)",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  "terminal.integrated.cursorBlinking": true,
   "editor.inlayHints.enabled": "offUnlessPressed",
   "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
   "C_Cpp.inlayHints.parameterNames.enabled": true,
-  "C_Cpp.inlayHints.referenceOperator.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.enabled": true
 }
