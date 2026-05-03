@@ -56,6 +56,4 @@ if not vim.g.vscode then
 
     -- Make file executable
     vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-else
-    vim.keymap.set('n', '<leader>w', 'mciw*<Cmd>nohl<CR>', { remap = true })
 end

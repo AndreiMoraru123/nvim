@@ -28,12 +28,15 @@ return {
     },
     {
         'vscode-neovim/vscode-multi-cursor.nvim',
-        event = 'VeryLazy',
+        lazy = false,
         cond = not not vim.g.vscode,
         opts = {
             default_mappings = true,
             no_selection = true
         },
+        config = function(_, opts)
+            require("core.multicursor").setup(opts)
+        end,
     },
     {
         "github/copilot.vim",
