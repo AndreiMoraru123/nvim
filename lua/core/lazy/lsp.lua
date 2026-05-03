@@ -66,30 +66,12 @@ return {
             vim.lsp.enable("nil_ls")
         end
 
-        -- local lspconfig = require("lspconfig")
-
-        -- local function disable_highlight(filetype)
-        --     if vim.bo.filetype == filetype then
-        --         for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
-        --             vim.api.nvim_set_hl(0, group, {})
-        --         end
-        --     end
-        -- end
-
-        -- lspconfig.prolog_ls.setup {
-        --     cmd = { "swipl",
-        --         "-g", "use_module(library(lsp_server)).",
-        --         "-g", "lsp_server:main",
-        --         "-t", "halt",
-        --         "--", "stdio"
-        --     },
-        --     filetypes = { "prolog" },
-        --     root_dir = lspconfig.util.find_git_ancestor,
-        --     single_file_support = true,
-        --     on_attach = function()
-        --         disable_highlight("prolog")
-        --     end,
-        -- }
+        -- If needed again, nvim-lspconfig ships the SWI-Prolog command for prolog_ls.
+        -- vim.lsp.config("prolog_ls", {
+        --     capabilities = capabilities,
+        --     root_markers = { "pack.pl", ".git" },
+        -- })
+        -- vim.lsp.enable("prolog_ls")
 
         vim.filetype.add({
             extension = {
