@@ -16,7 +16,7 @@ return {
 
         vim.api.nvim_set_keymap('n', 'K', ':Lspsaga hover_doc<CR>', { noremap = true, silent = true })
 
-        vim.api.nvim_set_keymap('n', '<leader>ca', ':Lspsaga code_action<CR>', { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', 'g.', ':Lspsaga code_action<CR>', { noremap = true, silent = true })
 
         vim.api.nvim_set_keymap('n', '<C-l>', ':Lspsaga show_line_diagnostics<CR>',
             { noremap = true, silent = true })
