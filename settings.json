@@ -60,6 +60,9 @@
     "CMAKE_C_COMPILER": "/run/current-system/sw/bin/gcc",
     "CMAKE_CXX_COMPILER": "/run/current-system/sw/bin/g++"
   },
+  "cmake.debugConfig": {
+    "type": "lldb-dap",
+  },
   "workbench.colorTheme": "Nexus Dark (Beta)",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "expand",
