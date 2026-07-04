@@ -60,15 +60,23 @@
     "CMAKE_C_COMPILER": "/run/current-system/sw/bin/gcc",
     "CMAKE_CXX_COMPILER": "/run/current-system/sw/bin/g++"
   },
-  "cmake.debugConfig": {
-    "type": "lldb-dap",
-  },
-  "workbench.colorTheme": "Nexus Dark (Beta)",
+  "workbench.colorTheme": "Ayu Dark",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "expand",
   "terminal.integrated.cursorBlinking": true,
   "editor.inlayHints.enabled": "offUnlessPressed",
   "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
   "C_Cpp.inlayHints.parameterNames.enabled": true,
-  "C_Cpp.inlayHints.referenceOperator.enabled": true
+  "C_Cpp.inlayHints.referenceOperator.enabled": true,
+  "cmake.debugConfig": {
+    "type": "lldb-dap"
+  },
+  "testMate.cpp.debug.configTemplate": {
+    "type": "lldb-dap",
+    "program": "${exec}",
+    "args": "${argsArray}",
+    "cwd": "${cwd}",
+    "env": "${envObj}",
+    "sourceFileMap": "${sourceFileMapObj}"
+  }
 }
