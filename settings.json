@@ -17,6 +17,7 @@
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "editor.lineNumbers": "relative",
+  "vscode-neovim.useWSL": true,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
