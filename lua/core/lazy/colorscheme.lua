@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-    color = color or "norrsken"
+    color = color or "ayu"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -7,11 +7,12 @@ function ColorMyPencils(color)
 end
 
 return {
-    "webhooked/norrsken.nvim",
+    "Shatur/neovim-ayu",
     cond = not vim.g.vscode,
     config = function()
-        require('norrsken').setup({
-            transparent_bg = true,
+        require('ayu').setup({
+            mirage = false,
+            terminal = true,
         })
         ColorMyPencils()
     end
