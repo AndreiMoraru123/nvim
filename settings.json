@@ -21,13 +21,15 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "editor.semanticHighlighting.enabled": true,
-  "editor.fontFamily": "Iosevka Nerd Font Medium",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.semanticTokenColorCustomizations": { "enabled": false },
+  "editor.fontFamily": "Iosevka Mayukai Original",
   "editor.fontLigatures": false,
   "editor.fontSize": 16,
   "zenMode.centerLayout": false,
   "debug.console.fontSize": 16,
-  "terminal.integrated.fontFamily": "'Fira Code Medium'",
+  "terminal.integrated.fontFamily": "Iosevka Mayukai Original",
+  "terminal.integrated.fontSize": 16,
   "git.autofetch": true,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.inlayHints.callArgumentNames": "all",
@@ -79,5 +81,7 @@
     "cwd": "${cwd}",
     "env": "${envObj}",
     "sourceFileMap": "${sourceFileMapObj}"
-  }
+  },
+  "workbench.colorTheme": "Mayukai Dark",
+  "workbench.iconTheme": "ayu",
 }
